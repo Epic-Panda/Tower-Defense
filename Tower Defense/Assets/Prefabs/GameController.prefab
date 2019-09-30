@@ -1,0 +1,231 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1801378736437002}
+  m_IsPrefabParent: 1
+--- !u!1 &1801378736437002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4261140078296688}
+  - component: {fileID: 114413339267573376}
+  - component: {fileID: 114170328965817050}
+  - component: {fileID: 114104192028471734}
+  - component: {fileID: 114396760375170864}
+  - component: {fileID: 114391090933264440}
+  - component: {fileID: 114695398822509318}
+  - component: {fileID: 114533309889047440}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4261140078296688
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1801378736437002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114104192028471734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1801378736437002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47fadd336aa6bf40acf46bbf1bce8ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 50
+  lives: 3
+  maxLives: 0
+  rounds: 0
+  moneyStatsText: {fileID: 0}
+  lifeStatsText: {fileID: 0}
+--- !u!114 &114170328965817050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1801378736437002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786e5cef337dec84183065bf8c1e175c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeUI: {fileID: 0}
+--- !u!114 &114391090933264440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1801378736437002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065418351926ed74987e99eeacaf1854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standardTurret:
+    turretPrefab: {fileID: 1499338957332038, guid: a3eb786ee9089574b8f044c2fe5eecdc,
+      type: 2}
+    cost: 15
+    sellCost: 10
+    about: medium damage, medium rate of fire, low range
+    turretUpgradedPrefab: {fileID: 1943781846127862, guid: 52962d002e3056a43af0b94524b7e835,
+      type: 2}
+    upgradeCost: 7
+    upgradedSellCost: 15
+    buildEffect: {fileID: 1403761748617268, guid: 60ec6959e9fe626459cbc25aab8a9134,
+      type: 2}
+    turretUpgradeEffect: {fileID: 1403761748617268, guid: cb185b4079ac5664f8b4678c4f57b8eb,
+      type: 2}
+    sellEffect: {fileID: 1403761748617268, guid: ba65cba75c9d9514297fecc37f37658e,
+      type: 2}
+  missileTurret:
+    turretPrefab: {fileID: 1904495789429102, guid: a7c0865b6a4091e4f9e5151398da4481,
+      type: 2}
+    cost: 22
+    sellCost: 15
+    about: medium damage + explosion damage, low rate of fire, medium range
+    turretUpgradedPrefab: {fileID: 1904495789429102, guid: a622fc9c9917b234a97b9fd66cad609b,
+      type: 2}
+    upgradeCost: 11
+    upgradedSellCost: 22
+    buildEffect: {fileID: 1403761748617268, guid: 60ec6959e9fe626459cbc25aab8a9134,
+      type: 2}
+    turretUpgradeEffect: {fileID: 1403761748617268, guid: cb185b4079ac5664f8b4678c4f57b8eb,
+      type: 2}
+    sellEffect: {fileID: 1403761748617268, guid: ba65cba75c9d9514297fecc37f37658e,
+      type: 2}
+  laserBeamer:
+    turretPrefab: {fileID: 1123148200491820, guid: b2a0ed26d0598ea44b22c122449196ea,
+      type: 2}
+    cost: 30
+    sellCost: 20
+    about: medium damage + slowdown, continuous fire, medium range
+    turretUpgradedPrefab: {fileID: 1123148200491820, guid: 77d594895375ee8449abe676465ca5ef,
+      type: 2}
+    upgradeCost: 15
+    upgradedSellCost: 30
+    buildEffect: {fileID: 1403761748617268, guid: 60ec6959e9fe626459cbc25aab8a9134,
+      type: 2}
+    turretUpgradeEffect: {fileID: 1403761748617268, guid: cb185b4079ac5664f8b4678c4f57b8eb,
+      type: 2}
+    sellEffect: {fileID: 1403761748617268, guid: ba65cba75c9d9514297fecc37f37658e,
+      type: 2}
+  standardTurretCost: {fileID: 0}
+  missileTurretCost: {fileID: 0}
+  laserBeamerCost: {fileID: 0}
+  aboutStandardTurretUI: {fileID: 0}
+  aboutMissileTurretUI: {fileID: 0}
+  aboutLaserBeamerUI: {fileID: 0}
+  aboutStandardTurretText: {fileID: 0}
+  aboutMissileTurretText: {fileID: 0}
+  aboutLaserBeamerText: {fileID: 0}
+--- !u!114 &114396760375170864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1801378736437002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aec4b950e5e6d746893cd5194cd8086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEndUI: {fileID: 0}
+  pauseMeniUI: {fileID: 0}
+  levelWonUI: {fileID: 0}
+  timeUI: {fileID: 0}
+  uis: {fileID: 0}
+  fadingController: {fileID: 0}
+  menuSceneName: MainMenu
+  nextLevelName: Level_2
+  currentLevel: 1
+  gameOver: 0
+--- !u!114 &114413339267573376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1801378736437002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d634ebef3d2f994d81beebe9f921a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - enemyPref: {fileID: 1837876128738526, guid: e133ad30b59d8d4488b0dfe00adf09d4,
+      type: 2}
+    enemyNumber: 2
+    ratePerSec: 2
+  - enemyPref: {fileID: 1837876128738526, guid: e133ad30b59d8d4488b0dfe00adf09d4,
+      type: 2}
+    enemyNumber: 4
+    ratePerSec: 2
+  - enemyPref: {fileID: 1837876128738526, guid: e133ad30b59d8d4488b0dfe00adf09d4,
+      type: 2}
+    enemyNumber: 10
+    ratePerSec: 2
+  - enemyPref: {fileID: 1837876128738526, guid: e133ad30b59d8d4488b0dfe00adf09d4,
+      type: 2}
+    enemyNumber: 20
+    ratePerSec: 2
+  - enemyPref: {fileID: 1837876128738526, guid: e133ad30b59d8d4488b0dfe00adf09d4,
+      type: 2}
+    enemyNumber: 30
+    ratePerSec: 2
+  timeBetweenWaves: 4
+  gameManager: {fileID: 114396760375170864}
+  countdownText: {fileID: 0}
+  startingPoint1: {fileID: 0}
+  startingPoint2: {fileID: 0}
+  path1: {fileID: 0}
+  path2: {fileID: 0}
+--- !u!114 &114533309889047440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1801378736437002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d212c648684b14ca0419aba3736689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui: {fileID: 0}
+  upgradeCostText: {fileID: 0}
+  upgradeBtn: {fileID: 0}
+  sellCostText: {fileID: 0}
+--- !u!114 &114695398822509318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1801378736437002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61f681dffcece341acef3f0b18426e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
